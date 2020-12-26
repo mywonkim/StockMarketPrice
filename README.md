@@ -7,9 +7,11 @@ StockMarketPrice is a stock price information application.
 
 This application helps you view the current live stock price, 1-year stock price trend, and stock price estimation of a company of your interest. It is simple and easy to use and most importantly, free of charge.
 
+<img src="images/stockPriceTrend.JPG" width="300" height="300">
+
 Here are some screenshots of application usage:
 
-<img src="images/firstSight.JPG" width="300" height="300"><img src="images/tickerSymbolEntered.JPG" width="300" height="300"><img src="images/stockPriceTrend.JPG" width="300" height="300">
+<img src="images/firstSight.JPG" width="300" height="300"><img src="images/tickerSymbolEntered.JPG" width="300" height="300"><img src="images/livePrice.JPG" width="300" height="300">
 
 ## Usage
 
@@ -25,6 +27,10 @@ Here is the instruction:
 3. Click one of the three buttons: Live Price, Price Prediction, or Price Trend
 4. Make sure you know this application has limits and does not guarantee any accuracy
 5. Use this application at your own risk
+
+## Future Improvements
+1. Improve price prediction algorithm
+2. Figure out a way to distribute this application so that those who do not have a python IDE can also use it.
 
 # ***ENJOY!***
 :chart_with_upwards_trend: :chart_with_downwards_trend:
