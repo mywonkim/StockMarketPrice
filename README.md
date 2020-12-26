@@ -9,7 +9,7 @@ This application helps you view the current live stock price, 1-year stock price
 
 Here are some screenshots of application usage:
 
-<img src="images/firstSight.JPG" width="200" height="200"><img src="images/tickerSymbolEntered.JPG" width="200" height="200"><img src="images/stockPriceTrend.JPG" width="200" height="200">
+<img src="images/firstSight.JPG" width="300" height="300"><img src="images/tickerSymbolEntered.JPG" width="300" height="300"><img src="images/stockPriceTrend.JPG" width="300" height="300">
 
 ## Usage
 
