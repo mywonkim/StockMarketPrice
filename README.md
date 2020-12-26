@@ -29,7 +29,7 @@ Here is the instruction:
 5. Use this application at your own risk
 
 ## Future Improvements
-1. Improve price prediction algorithm (Currently using polynomial regression despite the fact that machine learning is required)
+1. Improve price prediction algorithm (Currently using polynomial regression)
 2. Figure out a way to distribute this application so that those who do not have a python IDE can also use it.
 
 # ***ENJOY!***
