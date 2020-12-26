@@ -41,11 +41,11 @@ class StockMarketPrice:
 
     def getDataForHD(self):
         # historical data dataframe
-        # data from 10 years ago from now
+        # data from 1 years ago from now
         historicalDF = \
             pdr.get_data_yahoo(symbols=self.tickerSymbolOfCompany,
                                start=datetime.today() - relativedelta(years=1), end=datetime.today())
-        # include Date index
+        # include Date index in dataframe
         historicalDF.reset_index(inplace=True, drop=False)
         return historicalDF
 
