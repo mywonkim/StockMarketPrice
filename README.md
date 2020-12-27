@@ -15,10 +15,10 @@ Here are some screenshots of application usage:
 
 ## Usage
 
-1. Download two python files: main.py and stockPrice.py
-2. Put these two files inside the same folder
-3. On your favorite IDE, run main.py
-4. Read the instruction before you use it.
+1. Download exe folder
+2. Make sure all the files in exe folder is in the same directory
+3. Run main.exe
+4. Read the instruction before you use it
 
 Here is the instruction:
 
@@ -29,8 +29,7 @@ Here is the instruction:
 5. Use this application at your own risk
 
 ## Future Improvements
-1. Improve price prediction algorithm (Currently using polynomial regression)
-2. Figure out a way to distribute this application so that those who do not have a python IDE can also use it.
+1. Figure out a way to distribute this application so that those who do not have a python IDE can also use it.
 
 # ***ENJOY!***
 :chart_with_upwards_trend: :chart_with_downwards_trend:
