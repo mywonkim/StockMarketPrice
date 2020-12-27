@@ -16,7 +16,7 @@ Here are some screenshots of application usage:
 ## Usage
 
 1. Download exe folder and all the files inside it
-2. Make sure all the files in exe folder is in the same directory
+2. Make sure all the files from exe folder is in the same directory
 3. Run main.exe
 4. Read the instruction before you use it
 
