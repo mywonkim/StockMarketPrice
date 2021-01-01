@@ -1,4 +1,3 @@
-
 # StockMarketPrice
 
 StockMarketPrice is a stock price information application. 
@@ -14,12 +13,6 @@ Here are some screenshots of application usage:
 <img src="images/firstSight.JPG" width="300" height="300"><img src="images/tickerSymbolEntered.JPG" width="300" height="300"><img src="images/livePrice.JPG" width="300" height="300">
 
 ## Usage
-
-1. Download executable folder and all the files inside it
-2. Make sure all the files from executable folder is in the same directory
-3. Run main.exe
-4. Read the instruction before you use it
-
 Here is the instruction:
 
 1. Enter the ticker symbol of your company and click "Enter" button
@@ -29,7 +22,7 @@ Here is the instruction:
 5. Use this application at your own risk
 
 ## Future Improvements
-1. Figure out a way to distribute this application so that those who do not have a python IDE can also use it.
+1. Figure out a better algorithm for price prediction
 
 # ***ENJOY!***
 :chart_with_upwards_trend: :chart_with_downwards_trend:
