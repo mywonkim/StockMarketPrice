@@ -2,7 +2,6 @@ import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
-import time
 import numpy as np
 import pandas_datareader as pdr
 from sklearn import linear_model
@@ -24,20 +23,13 @@ class StockMarketPrice:
         return currency
 
     def getDataForLive(self):
-        price = self.soup.find('div', {'class': 'D(ib) Mend(20px)'}).find_all('span')[0].text
+        currentPrice = self.soup.find('div', {'class': 'D(ib) Mend(20px)'}).find_all('span')[0].text
         priceDelta = self.soup.find('div', {'class': 'D(ib) Mend(20px)'}).find_all('span')[1].text
-        return str(price) + " " + str(priceDelta)
+        return str(currentPrice) + " " + str(priceDelta)
 
     def displayLivePrice(self):
         now = datetime.now().strftime("%Y/%m/%d %H:%M:%S")
         return f"Current price for {self.tickerSymbolOfCompany} at {now} is {self.getDataForLive()} ({self.currency})"
-        """
-        # update current price every minute
-        starttime = time.time()
-        while True:
-            print(f"current live price for {self.tickerSymbolOfCompany} is {self.getDataForLive()}")
-            time.sleep(60.0 - ((time.time() - starttime) % 60.0))
-        """
 
     def getDataForHD(self):
         # historical data dataframe
@@ -70,9 +62,11 @@ class StockMarketPrice:
         model.fit(indepVar_poly, _2DdepVar)  # Fit the model
         to_predict = poly_features.fit_transform(np.array([[whichDateToPredict]]))
         predicted = model.predict(to_predict)
-        pricePredicted = "{:.2f}".format(predicted[0][0])
+        pricePredicted = "{:.2f}".format(predicted[0][0]) # two decimal points
+
         # print predicted High
-        return f"Predicted {whichCol} price for {self.tickerSymbolOfCompany} in {howManyDaysAfterTodayToPredict} day(s) is {pricePredicted} ({self.currency})"
+        return f"Predicted {whichCol} price for {self.tickerSymbolOfCompany} " \
+               f"in {howManyDaysAfterTodayToPredict} day(s) is {pricePredicted} ({self.currency})"
 
 
     def plotTrend(self):
@@ -83,3 +77,14 @@ class StockMarketPrice:
         self.df.plot(kind='line', x='Date', y='High', color='red', ax=ax)
         self.df.plot(kind='line', x='Date', y='Low', color='blue', ax=ax)
         plt.show()
+
+    def getEarningRate(self, priceYouPaid, numOfStocks):
+        # ((current price of stocks / price you paid when buying stocks) - 1) * 100
+        currentPrice = self.soup.find('div', {'class': 'D(ib) Mend(20px)'}).find_all('span')[0].text
+        currentPrice = float(currentPrice)
+        earningRate = ((currentPrice / priceYouPaid) - 1) * 100
+        earningRate = "{:.2f}".format(earningRate) # two decimal places
+        earnings = (currentPrice - priceYouPaid) * numOfStocks
+        earnings = "{:.2f}".format(earnings) # two decimal places
+        return f"Your earning rate is {earningRate}% and you have earned {earnings} ({self.currency})"
+
