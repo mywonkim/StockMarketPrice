@@ -21,7 +21,7 @@ Here is the instruction:
 
 1. Enter the ticker symbol of your company and click "Enter" button
 2. Make sure the message "TICKER SYMBOL OF YOUR COMPANY HAS BEEN ENTERED!!" shows up
-3. Click one of the three buttons: Live Price, Price Prediction, or Price Trend
+3. Click one of the buttons
 4. Make sure you know this application has limits and does not guarantee any accuracy
 5. Use this application at your own risk
 
