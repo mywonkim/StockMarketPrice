@@ -4,6 +4,23 @@ StockMarketPrice is a stock price information application.
 
 <img src="images/stockPriceTrend.JPG" width="300" height="300">
 
+## Build Instruction
+1. Git clone:
+    ```bash
+    $ git clone https://github.com/mywonkim/StockMarketPrice.git
+    $ cd StockMarketPrice
+    ```
+2. Install required Python packages:
+    ```bash
+    $ pip install .
+    ```
+3. Make an executable file:
+    ```bash
+    $ python setup.py build
+    ```
+4. Run the executable.
+5. Alternatively, simply run main.py if you have an IDE.
+
 ## Update (Jan. 2, 2021)
 
 Earning rate and total earnings feature has been added. You can now check how much you have earned or lost. Simply type in the price per stock you paid when you purchased it and how many you bought, and it will automatically calculate numbers for you.
